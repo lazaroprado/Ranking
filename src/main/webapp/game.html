@@ -1,0 +1,32 @@
+<lift:surround with="template" at="content" xmlns:lift="http://www.w3.org/1999/xhtml">
+    <div class="lift:GameSnippet">
+
+        <div class="left-sidebar">
+            <!--<div class="game"></div>-->
+            <h2>Mandante</h2>
+            <div class="">
+                <select class="principal_players styled-select"></select>
+                <span class="right-space"></span>
+                <input type="text" class="principal_score score_input" value="0"/>
+            </div>
+        </div>
+
+        <div class="right-sidebar">
+            <h2>Visitante</h2>
+            <div class="">
+                <input type="text" class="visitor_score score_input" value="0"/>
+                <span class="left-space"></span>
+                <select class="visitor_players styled-select"></select>
+            </div>
+        </div>
+
+        <div class="controls">
+            <label class="label-control-checkbox" for="oficial_game">Esse é um jogo oficial?</label>
+            <input id="oficial_game" type="checkbox" checked class="control-checkbox"/>
+            <br/><br/>
+            <button class="control-button" onclick="games.saveGame()">Cadastrar Jogo</button>
+        </div>
+
+    </div>
+
+</lift:surround>

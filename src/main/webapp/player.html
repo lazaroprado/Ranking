@@ -1,0 +1,15 @@
+<lift:surround with="template" at="content" xmlns:lift="http://www.w3.org/1999/xhtml">
+    <div class="lift:PlayerSnippet">
+        <div class="one-bar">
+            <h3 style="padding-left: 90px;">Nome do jogador:</h3><br/>
+            <div style="text-align: center;">
+                <input id="player_input" class="player_name player_input" type="text" />
+                <select class="player_team styled-select player-select left-space"></select>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="control-button" onclick="players.savePlayer()">Cadastrar Jogador</button>
+        </div>
+        <span></span>
+    </div>
+</lift:surround>

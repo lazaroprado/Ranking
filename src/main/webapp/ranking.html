@@ -1,0 +1,32 @@
+<lift:surround with="template" at="content" xmlns:lift="http://www.w3.org/1999/xhtml">
+    <div class="lift:RankingSnippet">
+
+        <div class="one-bar">
+            <div class="ranking">
+                <table id="ranking_table" border="1">
+                    <tr>
+                        <th style="width: 22%;" colspan="2">Jogador</th>
+                        <th style="width: 10%;">Pontos</th>
+                        <th style="width: 10%;">Vitórias</th>
+                        <th style="width: 10%;">Empates</th>
+                        <th style="width: 10%;">Derrotas</th>
+                        <th style="width: 10%;">Saldo</th>
+                        <th style="width: 15%;">Aproveitamento (vitórias)</th>
+                    </tr>
+                    <tr class="rows"></tr>
+                </table>
+                <br/><hr/><br/>
+                <div id="games_table_div" style="display: none;">
+                    <h2>Jogos de: <span class="games_owner"></span></h2>
+                    <table id="games_table" border="1"></table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type='text/javascript'>
+        games.initPlayerData();
+    </script>
+
+</lift:surround>

@@ -1,0 +1,271 @@
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+	margin: 0;
+	padding: 0;
+	color: #535e65;
+	background: url(../images/siteBackground.png) repeat;
+}
+ul, ol, dl { 
+	padding: 0;
+	margin: 0;
+}
+h1, h2 {
+	margin-top: 0;	
+	color: #5789bb;
+	font-size:30px;
+	font-weight:normal;
+	padding-left:15px;
+	padding-right:15px;
+}
+h3, h4, h5, h6 {
+    margin-top: 0;
+    color: #5789bb;
+    font-size:25px;
+    font-weight:normal;
+}
+p {
+	margin-top: 10px;	
+	margin-bottom:10px;
+	padding-left:15px;
+	padding-right:15px;
+}
+a img {
+	border: none;
+}
+a {
+	color: #5789bb;
+	text-decoration: underline; 
+}
+a:hover, a:active, a:focus { 
+	color:#5789bb;
+	text-decoration: none;
+}
+
+header h1 {
+	color:#5789bb;
+	padding:30px 0;
+}
+footer {
+	padding: 10px 0;
+	position: relative;
+	clear: both;
+	/*border-top:1px solid #7d7d7d;*/
+	text-align:center;
+}
+.container {
+	width: 908px;
+    /*height: 210px;*/
+	margin: 0 auto; 
+}
+.content-container{
+    width: 908px;
+    height: auto;
+    margin: 0 auto;
+}
+.left-sidebar {
+	float: left;
+	width: 454px;
+    /*height: 100px;*/
+	padding: 10px 0 0 0;
+    text-align: center;
+    /*border-right:1px solid #7d7d7d;*/
+}
+.left-sidebar ul, .left-sidebar ol {
+	padding: 0 15px 15px 40px; 
+}
+.one-bar {
+    float: left;
+    width: 908px;
+    /*height: 100px;*/
+    padding: 10px 0 0 0;
+}
+.one-bar ul, .one-bar ol {
+	padding: 0 15px 15px 40px;
+}
+.right-sidebar {
+	padding: 10px 0 0 0;
+    width: 454px;
+    /*height: 100px;*/
+	float: left;
+    text-align: center;
+}
+.right-sidebar li {
+	margin:20px;
+}
+.picPreview {
+	text-align:center;
+	padding:20px 0;
+}
+.clearfloat {
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+.logo {
+    height: 100px;
+}
+
+.styled-select {
+    width: 80%;
+    color: #333;
+    font-weight: normal;
+    font-size: 2em;
+    line-height:1.2em;
+    margin: 0 0 10px;
+    padding: 6px 0; /* use this to set a specific height for your dropdown (DO NOT use the attribute 'height') */
+    cursor: pointer;
+    background-image: url("/images/siteBackground.png");
+    border: 1px 1px 1px;
+}
+
+.player-select {
+    width: 40%;
+}
+
+.score_input {
+    width: 15%;
+    color: #333;
+    font-weight: normal;
+    font-size: 2em;
+    text-align: center;
+    line-height:1.2em;
+    margin: 0 0 10px;
+    padding: 6px 0; /* use this to set a specific height for your dropdown (DO NOT use the attribute 'height') */
+    background-image: url("/images/siteBackground.png");
+    border: 1px 1px 1px;
+}
+
+.player_input {
+    width: 40%;
+    color: #333;
+    font-weight: normal;
+    font-size: 2em;
+    /*text-align: center;*/
+    margin: 0 0 10px;
+    background-image: url("/images/siteBackground.png");
+    border: 1px 1px 1px;
+}
+
+.left-space {
+    padding-left: 10px;
+}
+.right-space {
+    padding-right: 10px;
+}
+.controls {
+    text-align: center;
+    padding-top: 170px;
+}
+
+.control-button {
+    width: 60%;
+    /*height: 80px;*/
+    padding:30px 0;
+    color: #d9d9d9;
+    font-weight: normal;
+    cursor: pointer;
+    background-color: #535e65;
+    font-size:24px;
+}
+.control-button:hover {
+    background-color: #5789bb;
+    color: #fff;
+}
+.label-control-checkbox {
+    font-size: 15px;
+}
+.control-checkbox {
+    height: 13px;
+}
+
+.ranking {
+    font-size: 22px;
+    padding-left: 4%;
+}
+
+.rules {
+    text-align: left;
+    font-size: 20px;
+}
+
+#ranking_table, #games_table {
+    width: 96%;
+    text-align: center;
+    border-spacing: 1px;
+}
+
+.scroll {
+    /*position:absolute;*/
+    /*z-index:1;*/
+    overflow: auto;
+    height: 300px;
+}
+
+.msg {
+    position: absolute;
+    /*bottom: 70%;*/
+    top: 0px;
+    left: 39%;
+    /*margin-bottom: 0;*/
+    font-size: 1.2em;
+    /*padding: 1em 1.3em;*/
+    z-index: 9999;
+    border-radius: 4px;
+    padding: 15px;
+    width: 20%;
+    text-align: center;
+}
+
+.msg-success {
+    color: #31708f;
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1;
+}
+
+.msg-error {
+    color: #ffffff;
+    background-color: #8f7977;
+    border: 1px solid #8f7977;
+}
+
+/* ----- MAIN MENU ----- */
+nav ul {
+	padding-left: 0;
+	margin:1px 0 7px 0;
+	background-color: #535e65;
+	float: left;
+	width: 100%;
+	font-size:24px;
+	border-bottom:1px solid #7d7d7d;
+}
+nav ul li {
+	display: inline;
+}
+nav ul li a {
+	padding: 20px 20px;
+	background-color: #535e65;
+	color: #d9d9d9;
+	text-decoration: none;
+	float: left;
+}
+nav ul li a:hover {
+	background-color: #5789bb;
+	color: #fff;
+}
+nav ul .active a {
+	background-color: #5789bb;
+	color: #fff;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/scala/br/com/ranking/config/MongoConfig.scala" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/scala/br/com/ranking/lib/ForwardPipeline.scala" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/scala/br/com/ranking/lib/PUBoolean.scala" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/scala/br/com/ranking/lib/PUCurrency.scala" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/scala/br/com/ranking/lib/PUFormatHelpers.scala" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/scala/br/com/ranking/lib/PULogger.scala" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/scala/br/com/ranking/lib/StringUtils.scala" charset="UTF-8" />
+  </component>
+</project>
+

@@ -1,0 +1,21 @@
+net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 497 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /index returned 200, took 35 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /index returned 200, took 29 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /rules returned 200, took 38 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /index returned 200, took 28 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /rules returned 200, took 28 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 28 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 25 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /game returned 200, took 29 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 23 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /game returned 200, took 23 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 29 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /rules returned 200, took 24 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /rules returned 200, took 23 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /rules returned 200, took 22 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 22 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /game returned 200, took 20 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /game returned 200, took 19 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /game returned 200, took 19 Milliseconds
+net.liftweb.http.SessionMaster -  Session 1ktm98wlwmjlgt2z97ew2xply expired
+net.liftweb.util.TimeHelpers - Service request (GET) /game returned 200, took 24 Milliseconds

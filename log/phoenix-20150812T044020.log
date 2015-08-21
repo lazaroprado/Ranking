@@ -1,0 +1,7 @@
+net.liftweb.util.TimeHelpers - Service request (GET) /api/games/55c2d4f6cd6aa03672d81890 returned 200, took 262 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 333 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 47 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /api/games/55c2d4f6cd6aa03672d81890 returned 200, took 14 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /api/games/55c2fe8ccd6a5c78fffe9209 returned 200, took 14 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /api/games/55c2fee9cd6a5c78fffe920b returned 200, took 11 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /api/games/55c2feb4cd6a5c78fffe920a returned 200, took 12 Milliseconds

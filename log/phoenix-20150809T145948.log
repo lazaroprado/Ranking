@@ -1,0 +1,2 @@
+net.liftweb.util.TimeHelpers - Service request (GET) /game returned 200, took 432 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) / returned 200, took 32 Milliseconds

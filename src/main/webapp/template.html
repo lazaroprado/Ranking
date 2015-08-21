@@ -1,0 +1,50 @@
+<!doctype html>
+<html dir="ltr" lang="pt-BR" xmlns:lift="http://liftweb.net/" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
+
+    <lift:head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ranking Fifa 1.0</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/bootbox.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    </lift:head>
+
+    <body>
+        <!-- Header -->
+        <header class="container">
+            <img class="logo" src="images/logo-final.png" />
+            <nav>
+                <ul id="navlist">
+                    <li class="menu-index"><a href="index">Home</a></li>
+                    <li class="menu-rules" ><a href="rules">Regras Gerais</a></li>
+                    <li class="menu-player"><a href="player">Cadastrar Jogadores</a></li>
+                    <li class="menu-game"><a href="game">Cadastrar Jogos</a></li>
+                    <li class="menu-ranking"><a href="ranking">Ranking</a></li>
+                </ul>
+            </nav>
+            <span style="display: none;" class="msg msg-success"></span>
+            <span style="display: none;" class="msg msg-error"></span>
+        </header>
+
+
+        <!-- Content -->
+
+        <section class="content-container">
+            <lift:bind name="content" />
+        </section>
+
+        <footer class="container footer">
+            <a name="games"></a>
+            <p>Copyright &copy; Ranking Fifa 1.0. All rights reserved. Developed by Lázaro Prado
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,7 @@
+net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 429 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 29 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 33 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 29 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 27 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 28 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 25 Milliseconds

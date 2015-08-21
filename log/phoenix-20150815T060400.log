@@ -1,0 +1,2 @@
+net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 558 Milliseconds
+net.liftweb.util.TimeHelpers - Service request (GET) /api/games/55cec366d4c67265498db20c returned 200, took 71 Milliseconds

@@ -1,0 +1,6 @@
+net.liftweb.http.LiftRules - Snippet Failure: SnippetFailure(/player -> ParsePath(List(player),,true,false),Full(RankingSnippet),Class Not Found)
+net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 369 Milliseconds
+net.liftweb.http.LiftRules - Snippet Failure: SnippetFailure(/player -> ParsePath(List(player),,true,false),Full(RankingSnippet.render),Class Not Found)
+net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 42 Milliseconds
+net.liftweb.http.LiftRules - Snippet Failure: SnippetFailure(/player -> ParsePath(List(player),,true,false),Full(RankingSnippet.render),Class Not Found)
+net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 34 Milliseconds
