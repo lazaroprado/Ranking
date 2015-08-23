@@ -1,3 +1,12 @@
+var ajax_calls = {
+    start: function() {
+        $('#div_overlay').addClass('overlay');
+    },
+    end: function() {
+        $('#div_overlay').removeClass('overlay');
+    }
+};
+
 var menu = {
     init: function() {
         var url = window.location.pathname.replace('/','');
@@ -59,6 +68,8 @@ var games = {
             type: 'POST',
             url: '/api/game',
             data: json,
+            beforeSend: ajax_calls.start(),
+            complete: ajax_calls.end(),
             contentType:"application/json; charset=utf-8",
             dataType:"json",
             success: function(response) {
@@ -95,6 +106,8 @@ var games = {
         $.ajax({
             type: 'GET',
             url: '/api/games/' + player_id,
+            beforeSend: ajax_calls.start(),
+            complete: ajax_calls.end(),
             contentType:"application/json; charset=utf-8",
             success: function(games) {
                 //TODO criar overlay ajax
@@ -158,6 +171,8 @@ var players = {
             type: 'POST',
             url: '/api/player',
             data: json,
+            beforeSend: ajax_calls.start(),
+            complete: ajax_calls.end(),
             contentType:"application/json; charset=utf-8",
             dataType:"json",
             success: function(response) {

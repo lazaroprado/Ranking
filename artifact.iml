@@ -69,7 +69,6 @@
     <orderEntry type="library" name="Maven: com.foursquare:rogue-field_2.9.1:2.0.0-RC4" level="project" />
     <orderEntry type="library" name="Maven: com.foursquare:rogue-index_2.9.1:2.0.0-RC4" level="project" />
     <orderEntry type="library" name="Maven: org.joda:joda-convert:1.2" level="project" />
-    <orderEntry type="library" name="Maven: net.liftmodules:mongoauth_2.9.1:2.4-0.3" level="project" />
     <orderEntry type="library" name="Maven: org.mongodb:casbah-commons_2.9.1:2.6.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.nscala-time:nscala-time_2.9.1:0.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.mongodb:casbah-core_2.9.1:2.6.1" level="project" />
