@@ -1,0 +1,4 @@
+mongo.1.host=localhost
+mongo.1.port=27017
+mongo.db=ranking
+mongo.connections_per_host=5
