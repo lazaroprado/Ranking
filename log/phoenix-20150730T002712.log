@@ -1,2 +1,0 @@
-net.liftweb.http.LiftRules - Snippet Failure: SnippetFailure(/ -> ParsePath(List(index),,true,true),Full(LinksList),Class Not Found)
-net.liftweb.util.TimeHelpers - Service request (GET) / returned 200, took 381 Milliseconds

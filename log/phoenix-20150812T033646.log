@@ -1,3 +1,0 @@
-net.liftweb.util.TimeHelpers - Service request (POST) /api/reset-games returned 200, took 255 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (POST) /api/reset-players returned 200, took 49 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 333 Milliseconds

@@ -1,8 +1,0 @@
-net.liftweb.util.TimeHelpers - Service request (GET) /api/games returned 200, took 217 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /api/players returned 200, took 37 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /api/ranking returned 200, took 23 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (POST) /api/player returned 200, took 266 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (POST) /api/player returned 200, took 9 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (POST) /api/player returned 200, took 8 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /api/ranking returned 200, took 11 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /api/ranking returned 200, took 12 Milliseconds

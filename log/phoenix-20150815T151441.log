@@ -1,9 +1,0 @@
-net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 545 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /jquery.loadmask.min.js returned 404, took 12 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /jquery.loadmask.css returned 404, took 14 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 67 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /jquery.loadmask.css returned 404, took 6 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /jquery.loadmask.min.js returned 404, took 5 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 54 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /jquery.loadmask.css returned 404, took 6 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /jquery.loadmask.min.js returned 404, took 6 Milliseconds

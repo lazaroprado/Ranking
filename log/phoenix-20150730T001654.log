@@ -1,4 +1,0 @@
-net.liftweb.http.LiftRules - Snippet Failure: SnippetFailure(/ranking -> ParsePath(List(ranking),,true,false),Full(RankingSnippet),Class Not Found)
-net.liftweb.util.TimeHelpers - Service request (GET) /ranking returned 200, took 341 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /links returned 404, took 17 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) / returned 404, took 6 Milliseconds

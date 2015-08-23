@@ -1,6 +1,0 @@
-net.liftweb.util.TimeHelpers - Service request (GET) / returned 200, took 385 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 99 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 34 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 33 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 35 Milliseconds
-net.liftweb.util.TimeHelpers - Service request (GET) /player returned 200, took 32 Milliseconds
