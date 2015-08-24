@@ -12,10 +12,10 @@ import org.joda.time.{DateTime, DateTimeZone}
  *
  */
 object App extends Application {
-  MongoConfig.init()
+//  MongoConfig.init()
 
-  val data = TestData
-  val controller = LogicRankingController
+//  val data = TestData
+//  val controller = LogicRankingController
 
 //  val ronaldo = PlayerDAO.findById(data.ronaldoId).get
 //  ronaldo.total_score(5000).update
@@ -23,10 +23,15 @@ object App extends Application {
 //  zico.total_score(3000).update
 
   //executando o controller
-  controller.createGame(data.game_1)
-  controller.createGame(data.game_2)
+//  controller.createGame(data.game_1)
+//  controller.createGame(data.game_2)
 
 
+
+  val games = 16
+  val victories = 5
+
+  println(100 * victories / games)
 
 
 }

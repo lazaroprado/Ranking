@@ -50,6 +50,10 @@ trait PlayerMetaRecord extends Player with MongoRankingIdentifier[Player] {
     Player.orderDesc(_.total_score).fetch(1).headOption
   }
 
+  def findAllExcept(ids: List[String]): List[Player] = {
+    Player.where(_.id nin ids.map(new ObjectId(_))).fetch()
+  }
+
 }
 
 trait PlayerDAO {
@@ -62,6 +66,8 @@ trait PlayerDAO {
   }
 
   def findAll: List[Player] = Player.findAll
+
+  def findAllExcept(ids: List[String]): List[Player] = Player.findAllExcept(ids)
 
   def findAllSortByScore: List[Player] = Player.findAllSortByScore
 

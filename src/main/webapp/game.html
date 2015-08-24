@@ -2,21 +2,20 @@
     <div class="lift:GameSnippet">
 
         <div class="left-sidebar">
-            <!--<div class="game"></div>-->
             <h2>Mandante</h2>
             <div class="">
-                <select class="principal_players styled-select"></select>
+                <select class="principal_players styled-select" onchange="players.suggestGames($(this).val());"></select>
                 <span class="right-space"></span>
-                <input type="text" class="principal_score score_input" value="0"/>
+                <input type="text" class="principal_score score_input" value="0" onclick="$(this).val('')" onkeyup="validation.onlyNumbers(this)"/>
             </div>
         </div>
 
         <div class="right-sidebar">
             <h2>Visitante</h2>
             <div class="">
-                <input type="text" class="visitor_score score_input" value="0"/>
+                <input type="text" class="visitor_score score_input" value="0" onclick="$(this).val('')" onkeyup="validation.onlyNumbers(this)"/>
                 <span class="left-space"></span>
-                <select class="visitor_players styled-select"></select>
+                <select class="visitor_players styled-select" onchange="players.suggestGames(this.val());"></select>
             </div>
         </div>
 
@@ -25,6 +24,16 @@
             <input id="oficial_game" type="checkbox" checked class="control-checkbox"/>
             <br/><br/>
             <button class="control-button" onclick="games.saveGame()">Cadastrar Jogo</button>
+        </div>
+
+        <br/><hr/><br/>
+
+        <div id="suggested_games_div" class="one-bar" style="display: none;">
+            <h3>Não sugerir jogos com:</h3><br/>
+            <div class="player_exceptions left-space"></div><br/><br/>
+            <div class="suggested_games">
+                <table id="suggested_games_table" border="1"></table>
+            </div>
         </div>
 
     </div>

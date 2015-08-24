@@ -4,11 +4,12 @@ import br.com.ranking.controller.LogicRankingController
 import br.com.ranking.model.Game.GameCC
 import br.com.ranking.model.{GameDAO, PlayerDAO, Player}
 import br.com.ranking.model.Player.PlayerCC
-import net.liftweb.http.NoContentResponse
 import net.liftweb.http.rest.RestHelper
+import java.util.Date
 
 case class RestResponse(code: Int, message: String, value: Any)
 case class RankingCC(name: String, score: Int, goals_balance: Int, historical_percentage: Int)
+case class SuggestGames(opponentId: String, opponentName: String, qty: Int, registration: Date)
 
 object RankingRest extends RestHelper {
 
@@ -31,11 +32,13 @@ object RankingRest extends RestHelper {
 
     case "api" :: "games" :: _ Get _ => anyToJValue(GameDAO.findAll.map(_.toGameCC))
 
+    case "api" :: "players" :: _ Get _ => anyToJValue(PlayerDAO.findAll.map(_.toPlayerCC))
+
     case "api" :: "player" :: _ JsonPost json => savePlayer(json._1.extract[PlayerCC])
 
-    case "api" :: "player" :: player_id :: _ Get _ => anyToJValue(PlayerDAO.findById(player_id).map(_.toPlayerCC))
+    case "api" :: "player" :: "show-suggestions" :: player_ids :: _ Get _ => getSuggestions(player_ids)
 
-    case "api" :: "players" :: _ Get _ => anyToJValue(PlayerDAO.findAll.map(_.toPlayerCC))
+    case "api" :: "player" :: player_id :: _ Get _ => anyToJValue(PlayerDAO.findById(player_id).map(_.toPlayerCC))
 
     case "api" :: "ranking" :: _ Get _ => getRanking
 
@@ -113,6 +116,20 @@ object RankingRest extends RestHelper {
   def getAllPlayerGames(playerId: String) = {
     val games = GameDAO.findByPlayerId(playerId)
     anyToJValue(games.map(_.toGameCC))
+  }
+
+  def getSuggestions(playerIds: String) = {
+    val ids = playerIds.split(",").toList
+    val games = GameDAO.findByPlayerId(ids.head)
+    val otherPlayers = PlayerDAO.findAllExcept(ids)
+    val suggestions = otherPlayers.map(p => {
+      val opponentGames = games.filter(g => g.principal.value.player_id.toString == p.id.toString || g.visitor.value.player_id.toString == p.id.toString)
+      if(opponentGames.isEmpty)
+        SuggestGames(p.id.value.toString, p.name.value, 0, new Date())
+      else
+        SuggestGames(p.id.value.toString, p.name.value, opponentGames.size, opponentGames.reverse.head.registration.value)
+    }).sortBy(_.registration).sortBy(_.qty)
+    anyToJValue(suggestions)
   }
 
 }

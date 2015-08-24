@@ -45,6 +45,9 @@ var games = {
         } else if(principal.val() == visitor.val()){
             messages.error("Você não pode jogar contra você mesmo.");
             return;
+        } else if(principal_score.val() == '' || visitor_score.val() == ''){
+            messages.error("Número de gols inválidos.");
+            return;
         }
 
 
@@ -78,6 +81,8 @@ var games = {
                     $('.principal_score').val(0);
                     $('.visitor_players').val('default');
                     $('.visitor_score').val(0);
+                    $('#suggested_games_table').children().remove();
+                    $('#suggested_games_div').hide();
 
                     messages.success('Jogo cadastrado com sucesso!');
                 }
@@ -110,7 +115,6 @@ var games = {
             complete: ajax_calls.end(),
             contentType:"application/json; charset=utf-8",
             success: function(games) {
-                //TODO criar overlay ajax
                 var old_date = "";
                 $(games).each(function(i, game) {
                     var player = [name, game.principal.player_id == player_id ? game.principal.score : game.visitor.score],
@@ -188,6 +192,49 @@ var players = {
                 messages.error('Ocorreu algum problema com esse cadastro');
             }
         });
+    },
+
+    suggestGames: function(player_id) {
+        var filterIds = $('.filter-checkbox').map(function() { if($(this).is(':checked')) return $(this) }).map(function() { return $(this).attr('id'); }).get().join(','),
+            suggested_games_div = $('#suggested_games_div'),
+            suggested_games_table = $('#suggested_games_table'),
+            ids = player_id + ',' + filterIds;
+        suggested_games_table.children().remove();
+        $(suggested_games_div).hide();
+
+        if(player_id == 'default') return;
+
+        $.ajax({
+            type: 'GET',
+            url: '/api/player/show-suggestions/' + ids,
+            beforeSend: ajax_calls.start(),
+            complete: ajax_calls.end(),
+            contentType:"application/json; charset=utf-8",
+            success: function(suggestedGames) {
+                suggested_games_table.append(
+                    '<tr>' +
+                        '<th style="width: 30%;">Sugestão de próximos jogos</th>' +
+                        '<th style="width: 10%;">Confrontos já ocorridos</th>' +
+                    '</tr>'
+                );
+                $(suggestedGames).each(function(i, game) {
+                    suggested_games_table.append(
+                        '<tr>' +
+                            '<td style="width: 20%;">'+game.opponentName+'</td>' +
+                            '<td style="width: 20%;">'+game.qty+'</td>' +
+                        '</tr>'
+                    );
+                });
+                $(suggested_games_div).show();
+            },
+            error: function() {
+                messages.error('Ocorreu algum problema com essa busca');
+            }
+        });
+    },
+
+    exceptionCheckbox: function () {
+        players.suggestGames($('.principal_players').val());
     }
 };
 
@@ -211,6 +258,17 @@ var messages = {
             msg_success.hide(500);
         }, 3000);
     }
+};
+
+var validation = {
+  onlyNumbers: function(input) {
+      var score = $(input).val();
+      console.log(score);
+      if(isNaN(score) || score < 0 || score == '') {
+          $(input).val(0);
+          messages.error('Insira um número de gols válido');
+      }
+  }
 };
 
 $(document).ready(function() {

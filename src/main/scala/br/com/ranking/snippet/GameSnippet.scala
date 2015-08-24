@@ -14,7 +14,13 @@ class GameSnippet {
     }) ::: List(<option value="default" selected="selected">Selecione um Jogador</option>)) &
     ".visitor_players *" #> (allPlayers.map(player => {
       <option value={player.id.get}>{player.name}</option>
-    }) ::: List(<option value="default" selected="selected">Selecione um Jogador</option>))
+    }) ::: List(<option value="default" selected="selected">Selecione um Jogador</option>)) &
+    ".player_exceptions *" #> allPlayers.map(player => {
+      <div class="right-space suggest-checkbox">
+        <label class="label-control-checkbox" for={player.id.get}>{player.name}</label>
+        <input id={player.id.get} type="checkbox" class="control-checkbox filter-checkbox" onclick="players.exceptionCheckbox();" />
+      </div>
+    })
   }
 
 }
