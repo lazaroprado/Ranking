@@ -57,18 +57,18 @@ trait TestData {
 
 
   // jogos não oficiais //
-  val game_1 = GameCC(game_ronaldo1, game_zico0, Some("2015-08-06 20:00:00"), processed = false, oficial = false, victoryThree = false)
-  val game_2 = GameCC(game_ronaldo3, game_zico2, Some("2015-08-06 20:30:00"), processed = false, oficial = false, victoryThree = false)
-  val game_3 = GameCC(game_ronaldo0, game_zico0, Some("2015-08-06 21:00:00"), processed = false, oficial = false, victoryThree = false)
-  val game_4 = GameCC(game_ronaldo0, game_zico1, Some("2015-08-06 21:30:00"), processed = false, oficial = false, victoryThree = false)
+  val game_1 = GameCC(game_ronaldo1, game_zico0, Some("2015-08-06 20:00:00"), processed = false, official = false, victoryThree = false)
+  val game_2 = GameCC(game_ronaldo3, game_zico2, Some("2015-08-06 20:30:00"), processed = false, official = false, victoryThree = false)
+  val game_3 = GameCC(game_ronaldo0, game_zico0, Some("2015-08-06 21:00:00"), processed = false, official = false, victoryThree = false)
+  val game_4 = GameCC(game_ronaldo0, game_zico1, Some("2015-08-06 21:30:00"), processed = false, official = false, victoryThree = false)
 Some()
   // jogos oficiais //Some()
-  val game_5 = GameCC(game_ronaldo1, game_zico0, Some("2015-08-06 20:00:00"), processed = false, oficial = true, victoryThree = false)
-  val game_6 = GameCC(game_ronaldo2, game_zico2, Some("2015-08-06 20:30:00"), processed = false, oficial = true, victoryThree = false)
-  val game_7 = GameCC(game_ronaldo0, game_zico2, Some("2015-08-06 21:00:00"), processed = false, oficial = true, victoryThree = false)
-  val game_8 = GameCC(game_ronaldo3, game_zico0, Some("2015-08-06 21:30:00"), processed = false, oficial = true, victoryThree = false)
-  val game_9 = GameCC(game_ronaldo0, game_zico1, Some("2015-08-06 21:30:00"), processed = false, oficial = true, victoryThree = false)
-  val game_10 = GameCC(game_ronaldo0, game_zico1,Some("2015-08-06 21:30:00"), processed = false, oficial = true, victoryThree = false)
+  val game_5 = GameCC(game_ronaldo1, game_zico0, Some("2015-08-06 20:00:00"), processed = false, official = true, victoryThree = false)
+  val game_6 = GameCC(game_ronaldo2, game_zico2, Some("2015-08-06 20:30:00"), processed = false, official = true, victoryThree = false)
+  val game_7 = GameCC(game_ronaldo0, game_zico2, Some("2015-08-06 21:00:00"), processed = false, official = true, victoryThree = false)
+  val game_8 = GameCC(game_ronaldo3, game_zico0, Some("2015-08-06 21:30:00"), processed = false, official = true, victoryThree = false)
+  val game_9 = GameCC(game_ronaldo0, game_zico1, Some("2015-08-06 21:30:00"), processed = false, official = true, victoryThree = false)
+  val game_10 = GameCC(game_ronaldo0, game_zico1,Some("2015-08-06 21:30:00"), processed = false, official = true, victoryThree = false)
 
 
 }

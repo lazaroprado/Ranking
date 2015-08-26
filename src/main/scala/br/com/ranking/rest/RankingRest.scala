@@ -18,8 +18,8 @@ object RankingRest extends RestHelper {
   val OK_MESSAGE = "Success"
   val ERROR_MESSAGE = "Error"
 
-  //TODO fazer serviço para gerar a tabela de jogos a serem disputados. Usar o ID do jogador para setar automaticamente o resultado depois que o jogo for computado.
-  //TODO fazer em uma tela separada do cadastro de jogos, para não ficar muito cheia a tela.
+  //TODO Criar a idéia de campeonato. O campeonato terá jogadores e jogos, sendo que os jogadores podem setar em vários campeonatos. Isso vai gerar um ranking para cada campeonato
+  //TODO Criar o login para ver o ranking online. Deve se salvar no banco cada alteração feita, e cada cadastro efetuado.
 
   //TODO fazer um serviço que processe todos os jogos novamente. Ele primeiro deve limpar a pontuação dos jogadores, e o flag de processed do game, e então
   //TODO processador todos.
@@ -120,7 +120,7 @@ object RankingRest extends RestHelper {
 
   def getSuggestions(playerIds: String) = {
     val ids = playerIds.split(",").toList
-    val games = GameDAO.findByPlayerId(ids.head)
+    val games = GameDAO.findOfficialByPlayerId(ids.head)
     val otherPlayers = PlayerDAO.findAllExcept(ids)
     val suggestions = otherPlayers.map(p => {
       val opponentGames = games.filter(g => g.principal.value.player_id.toString == p.id.toString || g.visitor.value.player_id.toString == p.id.toString)

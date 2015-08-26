@@ -41,13 +41,13 @@ object LogicRankingController {
       //TODO verificar se o jogo é possível de ser realizado obedecendo a seguinte regra: Se for um confronto, e um dos jogadores tiver 0(zero) pontos, não pode ser feito o jogo
       val newGame = {
         if(isADrawGame(principal, visitor)){
-          Game.createRecord.principal(principal).visitor(visitor).registration(getDate(game.registration)).oficial(game.oficial).save
+          Game.createRecord.principal(principal).visitor(visitor).registration(getDate(game.registration)).official(game.official).save
         } else {
-          Game.createRecord.principal(principal.victory(isWinner(principal, visitor))).visitor(visitor.victory(isWinner(visitor, principal))).registration(getDate(game.registration)).oficial(game.oficial).save
+          Game.createRecord.principal(principal.victory(isWinner(principal, visitor))).visitor(visitor.victory(isWinner(visitor, principal))).registration(getDate(game.registration)).official(game.official).save
         }
       }
       // salvando dados dos jogadores
-      val victoryThree = updatePlayerData(principal, visitor, game.oficial)
+      val victoryThree = updatePlayerData(principal, visitor, game.official)
       //atualizado o flag de jogo processado
       newGame.processed(OK).victoryThree(victoryThree).update
       OK
@@ -169,7 +169,7 @@ object LogicRankingController {
   private def isWinner(player: GamePlayer, other: GamePlayer): Boolean = player.score.value > other.score.value
 
   def calcHistoricalPercentage(player: Player, isTheWinner: Boolean): Int = {
-    val games = gameDAO.findByPlayerId(player.id.value.toString).count(_.oficial.value)
+    val games = gameDAO.findByPlayerId(player.id.value.toString).count(_.official.value)
     val victories = player.victories.value + (if(isTheWinner) 1 else 0)
 
     if((games == 1 && !isTheWinner) || victories == 0) 0

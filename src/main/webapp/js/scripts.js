@@ -37,7 +37,7 @@ var games = {
             principal_score = $('.principal_score'),
             visitor = $('.visitor_players'),
             visitor_score = $('.visitor_score'),
-            isOficial = $('#oficial_game').is(':checked');
+            isOfficial = $('#official_game').is(':checked');
 
         if(principal.val() == 'default' || visitor.val() == 'default'){
             messages.error("Você precisa escolher 2 jogadores para cadastrar um jogo.");
@@ -62,7 +62,7 @@ var games = {
                 'score': parseInt(visitor_score.val()),
                 'victory': false
             },
-            'oficial': isOficial,
+            'official': isOfficial,
             'processed': false,
             'victoryThree': false
         });

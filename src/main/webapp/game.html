@@ -15,13 +15,13 @@
             <div class="">
                 <input type="text" class="visitor_score score_input" value="0" onclick="$(this).val('')" onkeyup="validation.onlyNumbers(this)"/>
                 <span class="left-space"></span>
-                <select class="visitor_players styled-select" onchange="players.suggestGames(this.val());"></select>
+                <select class="visitor_players styled-select" onchange="players.suggestGames($(this).val());"></select>
             </div>
         </div>
 
         <div class="controls">
-            <label class="label-control-checkbox" for="oficial_game">Esse é um jogo oficial?</label>
-            <input id="oficial_game" type="checkbox" checked class="control-checkbox"/>
+            <label class="label-control-checkbox" for="official_game">Esse é um jogo oficial?</label>
+            <input id="official_game" type="checkbox" checked class="control-checkbox"/>
             <br/><br/>
             <button class="control-button" onclick="games.saveGame()">Cadastrar Jogo</button>
         </div>
