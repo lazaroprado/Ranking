@@ -9,7 +9,7 @@ import java.util.Date
 
 case class RestResponse(code: Int, message: String, value: Any)
 case class RankingCC(name: String, score: Int, goals_balance: Int, historical_percentage: Int)
-case class SuggestGames(opponentId: String, opponentName: String, qty: Int, registration: Date)
+case class SuggestGames(opponentId: String, opponentName: String, qty: Int, registration: Option[Date])
 
 object RankingRest extends RestHelper {
 
@@ -125,10 +125,10 @@ object RankingRest extends RestHelper {
     val suggestions = otherPlayers.map(p => {
       val opponentGames = games.filter(g => g.principal.value.player_id.toString == p.id.toString || g.visitor.value.player_id.toString == p.id.toString)
       if(opponentGames.isEmpty)
-        SuggestGames(p.id.value.toString, p.name.value, 0, new Date())
+        SuggestGames(p.id.value.toString, p.name.value, 0, None)
       else
-        SuggestGames(p.id.value.toString, p.name.value, opponentGames.size, opponentGames.reverse.head.registration.value)
-    }).sortBy(_.registration).sortBy(_.qty)
+        SuggestGames(p.id.value.toString, p.name.value, opponentGames.size, Some(opponentGames.reverse.head.registration.value))
+    }).sortBy(_.qty).sortBy(_.registration)
     anyToJValue(suggestions)
   }
 
